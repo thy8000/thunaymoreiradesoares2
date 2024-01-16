@@ -552,10 +552,85 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.flex{
+  display: flex;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.gap-12{
+  gap: 3rem;
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.tracking-\[0\.5rem\]{
+  letter-spacing: 0.5rem;
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .font-poppins {
   font-family: "Poppins", system-ui, sans-serif;
 }
 
 .font-lora {
   font-family: "Lora", system-ui, sans-serif;
+}
+
+.top-hero {
+  background-image: url("../../assets/images/top-hero-image.jpg");
 }

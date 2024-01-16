@@ -1,2 +1,4 @@
 @import url("standarts/tailwind.css");
 @import url('standarts/fonts.css');
+
+@import url('components/top-hero.css');
