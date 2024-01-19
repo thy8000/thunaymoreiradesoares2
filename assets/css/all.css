@@ -552,6 +552,10 @@ html {
   --tw-backdrop-sepia:  ;
 }
 
+.relative{
+  position: relative;
+}
+
 .flex{
   display: flex;
 }
@@ -588,8 +592,16 @@ html {
   background-size: cover;
 }
 
+.bg-center{
+  background-position: center;
+}
+
 .bg-no-repeat{
   background-repeat: no-repeat;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-3xl{
@@ -599,6 +611,16 @@ html {
 
 .text-6xl{
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
   line-height: 1;
 }
 
@@ -633,4 +655,56 @@ html {
 
 .top-hero {
   background-image: url("../../assets/images/top-hero-image.jpg");
+}
+
+.before\:absolute::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:inset-0::before{
+  content: var(--tw-content);
+  inset: 0px;
+}
+
+.before\:h-full::before{
+  content: var(--tw-content);
+  height: 100%;
+}
+
+.before\:w-full::before{
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.before\:bg-black::before{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.before\:opacity-50::before{
+  content: var(--tw-content);
+  opacity: 0.5;
+}
+
+.before\:content-\[\'\'\]::before{
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+@media (min-width: 1024px){
+  .lg\:text-start{
+    text-align: start;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
