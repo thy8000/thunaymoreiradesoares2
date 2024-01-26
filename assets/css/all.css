@@ -565,6 +565,14 @@ html {
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
+.h-16{
+  height: 4rem;
+}
+
 .h-full{
   height: 100%;
 }
@@ -573,28 +581,36 @@ html {
   height: 100vh;
 }
 
-.h-16{
-  height: 4rem;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-full{
-  width: 100%;
+.h-auto{
+  height: auto;
 }
 
 .w-10{
   width: 2.5rem;
 }
 
-.w-8{
-  width: 2rem;
+.w-12{
+  width: 3rem;
 }
 
 .w-16{
   width: 4rem;
+}
+
+.w-5\/12{
+  width: 41.666667%;
+}
+
+.w-7\/12{
+  width: 58.333333%;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .max-w-\[1140px\]{
@@ -603,6 +619,10 @@ html {
 
 .max-w-\[28rem\]{
   max-width: 28rem;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -623,6 +643,10 @@ html {
 
 .gap-12{
   gap: 3rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .gap-4{
@@ -672,12 +696,16 @@ html {
   background-repeat: no-repeat;
 }
 
-.p-8{
-  padding: 2rem;
-}
-
 .p-3{
   padding: 0.75rem;
+}
+
+.p-7{
+  padding: 1.75rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .py-\[5\%\]{
@@ -702,6 +730,11 @@ html {
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl{
@@ -756,6 +789,37 @@ html {
   font-family: "Lora", system-ui, sans-serif;
 }
 
+.custom-container{
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+@media (min-width: 640px){
+  .custom-container{
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px){
+  .custom-container{
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px){
+  .custom-container{
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1280px){
+  .custom-container{
+    max-width: 1140px;
+  }
+}
+
 .top-hero {
   background-image: url("../../assets/images/top-hero-image.jpg");
 }
@@ -796,17 +860,20 @@ html {
   content: var(--tw-content);
 }
 
-.hover\:border-green-200:hover{
-  --tw-border-opacity: 1;
-  border-color: rgb(187 247 208 / var(--tw-border-opacity));
-}
-
 .hover\:border-green-500:hover{
   --tw-border-opacity: 1;
   border-color: rgb(58 123 76 / var(--tw-border-opacity));
 }
 
 @media (min-width: 1024px){
+  .lg\:h-screen{
+    height: 100vh;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
   .lg\:text-start{
     text-align: start;
   }
