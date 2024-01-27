@@ -24,7 +24,7 @@
         class="top-hero w-full h-screen bg-no-repeat bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black before:w-full before:h-full before:opacity-50"
       >
         <div
-          class="relative flex flex-col items-center justify-center gap-12 w-full h-full"
+          class="custom-container relative flex flex-col items-center justify-center gap-12 w-full h-full"
         >
           <h2
             class="text-5xl lg:text-6xl font-poppins font-bold text-white text-center lg:text-start"
@@ -136,11 +136,13 @@
 
       <section class="bg-neutral-900">
         <div
-          class="mx-auto py-[5%] max-w-[1140px] flex justify-center gap-20"
+          class="custom-container mx-auto py-[5%] max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
         >
-          <div class="w-5/12">
+          <div class="w-full lg:w-5/12">
             <div class="flex flex-col gap-8">
-              <h1 class="text-5xl font-poppins font-semibold text-green-500">Serviços</h1>
+              <h1 class="text-5xl font-poppins font-semibold text-green-500">
+                Serviços
+              </h1>
 
               <div class="flex flex-col gap-4 text-white text-lg leading-7">
                 <p>
@@ -158,46 +160,242 @@
             </div>
           </div>
 
-          <div class="w-7/12">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7">
-                <img class="w-12" src="../thunaymoreiradesoares2/assets/images/html.svg">
+          <div class="w-full lg:w-7/12">
+            <div class="grid grid-col-1 lg:grid-cols-2 gap-4">
+              <div
+                class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+              >
+                <img
+                  class="w-12"
+                  src="../thunaymoreiradesoares2/assets/images/html.svg"
+                />
 
-                <h3 class="text-center text-white font-semibold">Desenvolvimento Front-End</h3>
+                <h3 class="text-center text-white font-semibold">
+                  Desenvolvimento Front-End
+                </h3>
 
                 <p class="text-center text-sm text-neutral-300">
-                  Transformo designs criativos em sites dinâmicos e intuitivos. Utilizo as últimas tecnologias para garantir uma experiência de usuário memorável.
+                  Transformo designs criativos em sites dinâmicos e intuitivos.
+                  Utilizo as últimas tecnologias para garantir uma experiência
+                  de usuário memorável.
                 </p>
               </div>
 
-              <div class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7">
-                <img class="w-12" src="../thunaymoreiradesoares2/assets/images/code.svg">
+              <div
+                class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+              >
+                <img
+                  class="w-12"
+                  src="../thunaymoreiradesoares2/assets/images/code.svg"
+                />
 
-                <h3 class="text-center text-white font-semibold">Desenvolvimento Back-End</h3>
+                <h3 class="text-center text-white font-semibold">
+                  Desenvolvimento Back-End
+                </h3>
 
                 <p class="text-center text-sm text-neutral-300">
-                  Construo a espinha dorsal de seus sistemas, garantindo que sua aplicação funcione perfeitamente, seja escalável e segura.
+                  Construo a espinha dorsal de seus sistemas, garantindo que sua
+                  aplicação funcione perfeitamente, seja escalável e segura.
                 </p>
               </div>
 
-              <div class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7">
-                <img class="w-12" src="../thunaymoreiradesoares2/assets/images/wordpress.svg">
+              <div
+                class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+              >
+                <img
+                  class="w-12"
+                  src="../thunaymoreiradesoares2/assets/images/wordpress.svg"
+                />
 
-                <h3 class="text-center text-white font-semibold">Desenvolvimento Wordpress</h3>
+                <h3 class="text-center text-white font-semibold">
+                  Desenvolvimento Wordpress
+                </h3>
 
                 <p class="text-center text-sm text-neutral-300">
-                  Utilizo uma das plataformas mais utilizadas do mundo para a criação de sites e gestão de conteúdo CMS. Construo temas responsivos e funcionais para seu site Wordpress.
+                  Utilizo uma das plataformas mais utilizadas do mundo para a
+                  criação de sites e gestão de conteúdo CMS. Construo temas
+                  responsivos e funcionais para seu site Wordpress.
                 </p>
               </div>
 
-              <div class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7">
-                <img class="w-12" src="../thunaymoreiradesoares2/assets/images/gear.svg">
+              <div
+                class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+              >
+                <img
+                  class="w-12"
+                  src="../thunaymoreiradesoares2/assets/images/gear.svg"
+                />
 
-                <h3 class="text-center text-white font-semibold">Manutenção e Suporte</h3>
+                <h3 class="text-center text-white font-semibold">
+                  Manutenção e Suporte
+                </h3>
 
                 <p class="text-center text-sm text-neutral-300">
-                  Ofereço serviços contínuos de manutenção para garantir que o seu site e sua presença online permaneça atualizada, segura e funcional.
+                  Ofereço serviços contínuos de manutenção para garantir que o
+                  seu site e sua presença online permaneça atualizada, segura e
+                  funcional.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-neutral-900">
+        <div class="custom-container flex flex-col gap-12">
+          <div class="flex flex-col justify-center items-center gap-4">
+            <h1 class="text-5xl font-poppins font-semibold text-green-500">
+              Habilidades
+            </h1>
+
+            <h2 class="text-gray-300 text-lg leading-7">
+              Conheça minha experiência acadêmica e meus conhecimentos técnicos.
+            </h2>
+          </div>
+
+          <div class="flex">
+            <div class="flex flex-col gap-8 w-1/2">
+              <div>
+                <h4 class="text-white text-3xl">Formação Acadêmica</h4>
+              </div>
+
+              <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <span class="text-white font-medium text-xs"
+                      >2015 - 2017</span
+                    >
+
+                    <h4 class="text-green-500 font-semibold font-poppins">
+                      Curso de Web Design
+                    </h4>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <h5 class="text-gray-300 font-semibold">EVOLUTIME</h5>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <div>
+                    <span class="text-white font-medium text-xs"
+                      >2017 - 2019</span
+                    >
+
+                    <h4 class="text-green-500 font-semibold font-poppins">
+                      Tecnólogo de Análise e Desenvolvimento de Sistemas
+                    </h4>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <h5 class="text-gray-300 font-semibold">UNINOVE</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-1/2">
+              <div>
+                <h4 class="text-white text-3xl">Conhecimento Técnico</h4>
+              </div>
+
+              <div>
+                <div>
+                  <div class="mb-1 text-base font-medium text-white">HTML5</div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                    <div
+                      class="bg-green-500 h-2.5 rounded-full"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-1 text-base font-medium text-white">CSS</div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                    <div
+                      class="bg-green-500 h-2.5 rounded-full"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="mb-1 text-base font-medium text-white">
+                    Javascript
+                  </div>
+
+                  <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                    <div
+                      class="bg-green-500 h-2.5 rounded-full"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="mb-1 text-base font-medium text-green-700 dark:text-green-500"
+                  >
+                    PHP
+                  </div>
+                  <div
+                    class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700"
+                  >
+                    <div
+                      class="bg-green-600 h-2.5 rounded-full dark:bg-green-500"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="mb-1 text-base font-medium text-yellow-700 dark:text-yellow-500"
+                  >
+                    Wordpress
+                  </div>
+                  <div
+                    class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700"
+                  >
+                    <div
+                      class="bg-yellow-400 h-2.5 rounded-full"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="mb-1 text-base font-medium text-indigo-700 dark:text-indigo-500"
+                  >
+                    SASS
+                  </div>
+                  <div
+                    class="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700"
+                  >
+                    <div
+                      class="bg-indigo-600 h-2.5 rounded-full dark:bg-indigo-500"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    class="mb-1 text-base font-medium text-purple-700 dark:text-purple-500"
+                  >
+                    jQuery
+                  </div>
+                  <div
+                    class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                  >
+                    <div
+                      class="bg-purple-600 h-2.5 rounded-full dark:bg-purple-500"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
