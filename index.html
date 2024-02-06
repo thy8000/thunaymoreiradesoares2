@@ -6,6 +6,11 @@
     <title>Thunay Moreira de Soares - Desenvolvedor Fullstack</title>
 
     <link href="./assets/css/all.css" rel="stylesheet" />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
 
   <body>
@@ -19,7 +24,7 @@
     </header>
   -->
 
-    <main>
+    <main class="bg-neutral-900">
       <section
         class="top-hero w-full h-screen bg-no-repeat bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black before:w-full before:h-full before:opacity-50"
       >
@@ -97,7 +102,7 @@
         </div>
       </section>
 
-      <section class="w-full lg:h-screen h-auto bg-neutral-900">
+      <section class="w-full lg:h-screen h-auto">
         <div class="custom-container py-[5%]">
           <div
             class="flex justify-center items-center lg:flex-row flex-col gap-8 border border-neutral-700 rounded p-8 bg-neutral-800"
@@ -134,7 +139,7 @@
         </div>
       </section>
 
-      <section class="bg-neutral-900">
+      <section>
         <div
           class="custom-container mx-auto py-[5%] max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
         >
@@ -241,7 +246,7 @@
         </div>
       </section>
 
-      <section class="bg-neutral-900">
+      <section>
         <div class="custom-container flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
             <h1 class="text-5xl font-poppins font-semibold text-green-500">
@@ -277,7 +282,7 @@
 
                   <div class="w-full rounded-full h-[18px] mb-4">
                     <div
-                      class="bg-green-500 bg-gradient-green-500 w-11/12	h-[18px] rounded-full"
+                      class="bg-green-500 bg-gradient-green-500 w-11/12 h-[18px] rounded-full"
                     ></div>
                   </div>
                 </div>
@@ -299,7 +304,7 @@
 
                   <div class="w-full rounded-full h-[18px] mb-4">
                     <div
-                      class="bg-green-500 bg-gradient-green-500 w-11/12	h-[18px] rounded-full"
+                      class="bg-green-500 bg-gradient-green-500 w-11/12 h-[18px] rounded-full"
                     ></div>
                   </div>
                 </div>
@@ -321,7 +326,7 @@
 
                   <div class="w-full rounded-full h-[18px] mb-4">
                     <div
-                      class="bg-green-500 bg-gradient-green-500 w-10/12	h-[18px] rounded-full"
+                      class="bg-green-500 bg-gradient-green-500 w-10/12 h-[18px] rounded-full"
                     ></div>
                   </div>
                 </div>
@@ -363,7 +368,7 @@
                   </div>
                   <div class="w-full rounded-full h-[18px] mb-4">
                     <div
-                      class="bg-green-500 bg-gradient-green-500 w-[93%]	h-[18px] rounded-full"
+                      class="bg-green-500 bg-gradient-green-500 w-[93%] h-[18px] rounded-full"
                     ></div>
                   </div>
                 </div>
@@ -415,7 +420,7 @@
         </div>
       </section>
 
-      <section class="bg-neutral-900">
+      <section>
         <div class="custom-container">
           <div class="flex lg:flex-row-reverse flex-col gap-20 py-[5%]">
             <div class="w-full lg:w-1/2 flex flex-col gap-8">
@@ -455,9 +460,12 @@
                     <div class="mb-6 ml-6 pb-6">
                       <a href="#!" class="text-sm text-white">2019 - 2022</a>
                       <p class="mb-4 mt-2 text-neutral-300">
-                        Trabalhei como Desenvolvedor Back-End Júnior utilizando o framework Wordpress. Meu trabalho consistia em criar
-                        sites para clientes novos, realizar a manutenção de sites para os clientes antigos, e criar novas soluções
-                        e funcionalidades de acordo com a demanda e a necessidade dos clientes.
+                        Trabalhei como Desenvolvedor Back-End Júnior utilizando
+                        o framework Wordpress. Meu trabalho consistia em criar
+                        sites para clientes novos, realizar a manutenção de
+                        sites para os clientes antigos, e criar novas soluções e
+                        funcionalidades de acordo com a demanda e a necessidade
+                        dos clientes.
                       </p>
                     </div>
                   </li>
@@ -483,9 +491,13 @@
                         >2022 - Atualmente</a
                       >
                       <p class="mb-4 mt-2 text-neutral-300">
-                        Atualmente trabalho como Desenvolvedor Fullstack utilizando o framework Wordpress. Meu trabalho consiste em criar sites 
-                        para os clientes novos cujo o design seja fiel ao protótipo elaborado pelos Designers. Também realizo a manutenção dos sites
-                        de clientes antigos e crio novas soluções de acordo com as necessidades e demandas deles.
+                        Atualmente trabalho como Desenvolvedor Fullstack
+                        utilizando o framework Wordpress. Meu trabalho consiste
+                        em criar sites para os clientes novos cujo o design seja
+                        fiel ao protótipo elaborado pelos Designers. Também
+                        realizo a manutenção dos sites de clientes antigos e
+                        crio novas soluções de acordo com as necessidades e
+                        demandas deles.
                       </p>
                     </div>
                   </li>
@@ -496,9 +508,188 @@
         </div>
       </section>
 
-      <section>
-        <!-- TODO: QUALIFICAÇÕES (https://app.clickup.com/t/86871510c) -->
-        <h1>Portfolio</h1>
+      <section x-data="{tab: 'all'}">
+        <div class="custom-container">
+          <div class="flex flex-col">
+            <div
+              class="flex flex-col justify-center items-center gap-4 text-center w-full"
+            >
+              <h2 class="text-5xl font-poppins font-semibold text-green-500">
+                Projetos Pessoais
+              </h2>
+
+              <h3 class="max-w-prose text-gray-300 text-lg leading-7">
+                Confira os meus projetos pessoais e projetos que desenvolvi como
+                freelancer ao longo da minha jornada de aprendizado
+              </h3>
+            </div>
+
+            <div class="flex justify-center items-center gap-4 py-10">
+              <a
+                href="#"
+                class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
+                x-bind:class="{ 'personal-projects__button__active' : tab === 'all' }"
+                x-on:click.prevent="tab = 'all'"
+              >
+                <span class="text-white">Tudo</span>
+              </a>
+
+              <a
+                href="#"
+                class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
+                x-bind:class="{ 'personal-projects__button__active' : tab === 'web' }"
+                x-on:click.prevent="tab = 'web'"
+              >
+                <span class="text-white">Desenvolvimento Web</span>
+              </a>
+
+              <a
+                href="#"
+                class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
+                x-bind:class="{ 'personal-projects__button__active' : tab === 'games' }"
+                x-on:click.prevent="tab = 'games'"
+              >
+                <span class="text-white">Jogos</span>
+              </a>
+
+              <a
+                href="#"
+                class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
+                x-bind:class="{ 'personal-projects__button__active' : tab === 'mobile' }"
+                x-on:click.prevent="tab = 'mobile'"
+              >
+                <span class="text-white">App Mobile</span>
+              </a>
+
+              <a
+                href="#"
+                class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
+                x-bind:class="{ 'personal-projects__button__active' : tab === 'others' }"
+                x-on:click.prevent="tab = 'others'"
+              >
+                <span class="text-white">Outros</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-3 gap-4">
+              <div
+                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
+                x-show="tab === 'web' || tab === 'all'"
+              >
+                <div>
+                  <img
+                    class="w-full h-full object-cover"
+                    src="../thunaymoreiradesoares2/assets/images/it9-marketing-digital.png"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-6 min-h-52">
+                  <div class="flex flex-col gap-4 h-1/2">
+                    <h3 class="text-white text-lg font-bold font-poppins">
+                      IT9 Marketing Digital
+                    </h3>
+
+                    <div class="text-neutral-300">
+                      <p>
+                        Site responsivo em HTML, CSS, JS, PHP, Wordpress e
+                        Bootstrap.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4 items-end h-1/2">
+                    <a
+                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                      href="https://it9.com.br/"
+                      target="_blank"
+                    >
+                      Site
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
+                x-show="tab === 'web' || tab === 'all'"
+              >
+                <div>
+                  <img
+                    class="w-full h-full object-cover"
+                    src="../thunaymoreiradesoares2/assets/images/magalhaes-e-sipert-advogados-associados.png"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-6 min-h-52">
+                  <div class="flex flex-col gap-4 h-1/2">
+                    <h3 class="text-white text-lg font-bold font-poppins">
+                      Magalhães & Sipert Advogados Associados
+                    </h3>
+
+                    <div class="text-neutral-300">
+                      <p>
+                        Site responsivo em HTML, CSS, JS, PHP, Wordpress e
+                        Bootstrap.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4 items-end h-1/2">
+                    <a
+                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                      href="https://mslaw.com.br/"
+                      target="_blank"
+                    >
+                      Site
+                    </a>
+
+                    <a
+                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                      href="https://github.com/thy8000/magalhes-sipert-sociedade-de-advogados"
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
+                x-show="tab === 'web' || tab === 'all'"
+              >
+                <div>
+                  <img
+                    class="w-full h-full object-cover"
+                    src="../thunaymoreiradesoares2/assets/images/fctk.png"
+                  />
+                </div>
+
+                <div class="flex flex-col gap-6 min-h-52">
+                  <div class="flex flex-col gap-4 h-1/2">
+                    <h3 class="text-white text-lg font-bold font-poppins">
+                      FCTK
+                    </h3>
+
+                    <div class="text-neutral-300">
+                      <p>Site responsivo em HTML, CSS, JS, PHP e Wordpress.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4 items-end h-1/2">
+                    <a
+                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                      href="https://fctk.com.br/"
+                      target="_blank"
+                    >
+                      Site
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
