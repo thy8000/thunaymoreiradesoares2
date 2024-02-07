@@ -605,6 +605,10 @@ html {
   display: grid;
 }
 
+.h-1\/2{
+  height: 50%;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -627,30 +631,6 @@ html {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[150px\]{
-  height: 150px;
-}
-
-.h-\[100px\]{
-  height: 100px;
-}
-
-.h-\[80px\]{
-  height: 80px;
-}
-
-.h-\[50px\]{
-  height: 50px;
-}
-
-.h-\[200px\]{
-  height: 200px;
-}
-
-.h-1\/2{
-  height: 50%;
 }
 
 .min-h-52{
@@ -773,12 +753,12 @@ html {
   gap: 1rem;
 }
 
-.gap-8{
-  gap: 2rem;
-}
-
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .rounded{
@@ -851,16 +831,16 @@ html {
   padding: 0.75rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
 .p-7{
   padding: 1.75rem;
 }
 
 .p-8{
   padding: 2rem;
-}
-
-.p-5{
-  padding: 1.25rem;
 }
 
 .px-6{
