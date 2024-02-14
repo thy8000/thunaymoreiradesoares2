@@ -605,6 +605,10 @@ html {
   display: grid;
 }
 
+.aspect-\[300\/180\]{
+  aspect-ratio: 300/180;
+}
+
 .h-1\/2{
   height: 50%;
 }

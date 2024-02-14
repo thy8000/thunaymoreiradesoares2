@@ -509,7 +509,7 @@
       </section>
 
       <section x-data="{tab: 'all'}">
-        <div class="custom-container">
+        <div class="custom-container" x-data="projects">
           <div class="flex flex-col">
             <div
               class="flex flex-col justify-center items-center gap-4 text-center w-full"
@@ -572,330 +572,53 @@
             </div>
 
             <div class="grid grid-cols-3 gap-4">
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/it9-marketing-digital.png"
-                  />
-                </div>
+              <template x-for="project in projects" x-on:key="data.ID">
+                <div
+                  class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
+                  x-show="tab === project.type || tab === 'all'"
+                  x-transition:enter.duration.1000ms
+                  x-transition:leave.duration.1000ms
+                >
+                  <div>
+                    <img
+                      class="w-full object-cover aspect-[300/180]"
+                      x-bind:src="project.image"
+                    />
+                  </div>
 
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      IT9 Marketing Digital
-                    </h3>
+                  <div class="flex flex-col gap-6 min-h-52">
+                    <div class="flex flex-col gap-4 h-1/2">
+                      <h3
+                        class="text-white text-lg font-bold font-poppins"
+                        x-text="project.title"
+                      ></h3>
 
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo em HTML, CSS, JS, Bootstrap, PHP e
-                        Wordpress.
-                      </p>
+                      <div class="text-neutral-300">
+                        <p x-text="project.description"></p>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-4 items-end h-1/2">
+                      <a
+                        class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                        target="_blank"
+                        x-bind:href="project.link1.link"
+                        x-text="project.link1.name"
+                      >
+                      </a>
+
+                      <a
+                        class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
+                        target="_blank"
+                        x-bind:href="project.link2.link"
+                        x-text="project.link2.name"
+                        x-show="project.link2.link !== ''"
+                      >
+                      </a>
                     </div>
                   </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://it9.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-                  </div>
                 </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/magalhaes-e-sipert-advogados-associados.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Magalhães & Sipert Advogados Associados
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo em HTML, CSS, JS, PHP, Wordpress e
-                        Bootstrap para um cliente.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://mslaw.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://github.com/thy8000/magalhes-sipert-sociedade-de-advogados"
-                      target="_blank"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/fctk.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      FCTK
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo em HTML, CSS, JS, PHP e Wordpress para
-                        um cliente.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://fctk.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/acetec.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Acetec
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo em HTML, CSS, JS, PHP e Wordpress para
-                        um cliente.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://casadotnt.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/dra-andrea-signoretti.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Dra. Andrea Signoretti
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>Site responsivo feito em Wordpress e Elementor.</p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://andreasignoretti.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/altabase.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Altabase
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo feito em HTML, CSS, TailwindCSS, JQuery,
-                        PHP e Wordpress.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://altabase.com.br/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://github.com/thy8000/obrasoft"
-                      target="_blank"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/altaboards.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Altaboards
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo feito em HTML, CSS, TailwindCSS, JQuery,
-                        PHP e Wordpress.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://www.altaboards.com/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://github.com/thy8000/altaboards"
-                      target="_blank"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
-                x-show="tab === 'web' || tab === 'all'"
-              >
-                <div>
-                  <img
-                    class="w-full h-full object-cover"
-                    src="../thunaymoreiradesoares2/assets/images/portfolio-1-versao.png"
-                  />
-                </div>
-
-                <div class="flex flex-col gap-6 min-h-52">
-                  <div class="flex flex-col gap-4 h-1/2">
-                    <h3 class="text-white text-lg font-bold font-poppins">
-                      Portfolio (1° Versão)
-                    </h3>
-
-                    <div class="text-neutral-300">
-                      <p>
-                        Site responsivo feito em HTML, CSS e Jquery. Primeira
-                        versão do meu site.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-4 items-end h-1/2">
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://thy8000.github.io/thunaymoreiradesoares/"
-                      target="_blank"
-                    >
-                      Site
-                    </a>
-
-                    <a
-                      class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer text-white"
-                      href="https://github.com/thy8000/thunaymoreiradesoares"
-                      target="_blank"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </template>
             </div>
           </div>
         </div>
