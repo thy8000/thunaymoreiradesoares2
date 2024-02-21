@@ -13,18 +13,32 @@
     ></script>
   </head>
 
-  <body>
-    <!--
-    <header>
-        -->
-    <!-- TODO: HEADER (https://app.clickup.com/t/8687150p8) -->
-    <!--
-      <h1>Header</h1>
-      
-    </header>
-  -->
+  <body class="bg-neutral-900">
+    <header class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500">
+      <div class="custom-container">
+        <div class="flex justify-between items-center py-4">
+          <div>
+            <img class="w-8" src="../thunaymoreiradesoares2/assets/images/hamburguer.svg" />
+          </div>
 
-    <main class="bg-neutral-900">
+          <div>
+            <span class="text-white text-lg font-poppins">
+              Thunay Moreira de Soares
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="absolute top-0 left-0 w-screen h-screen bg-black opacity-50 blur-xl"></div>
+ 
+        <div class="fixed top-36 left-1/2 left-0 -translate-x-2/4 opacity-100">
+          <h1 class="text-5xl font-poppins font-semibold text-green-500">Menu</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="blur overflow-scroll">
       <section
         class="top-hero w-full h-screen bg-no-repeat bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black before:w-full before:h-full before:opacity-50"
         x-data="hero"
@@ -145,7 +159,7 @@
         </div>
       </section>
 
-      <section>
+      <section x-data="skills">
         <div class="custom-container flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
             <h1 class="text-5xl font-poppins font-semibold text-green-500">
@@ -164,155 +178,31 @@
               </div>
 
               <div class="flex flex-col gap-4 pb-12">
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
-                    >
-                      HTML5
+                <template
+                  x-for="skillList in skillsList"
+                  x-on:key="skillList.id"
+                >
+                  <div class="flex flex-col gap-2">
+                    <div class="flex">
+                      <div
+                        class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
+                        x-text="skillList.name"
+                      ></div>
+
+                      <div
+                        class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
+                        x-text="skillList.level"
+                      ></div>
                     </div>
 
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Avançado
+                    <div class="w-full rounded-full h-[18px] mb-4">
+                      <div
+                        class="bg-green-500 bg-gradient-green-500 h-[18px] rounded-full"
+                        x-bind:style="`width: ${skillList.percent}%`"
+                      ></div>
                     </div>
                   </div>
-
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-11/12 h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
-                    >
-                      CSS
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Avançado
-                    </div>
-                  </div>
-
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-11/12 h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
-                    >
-                      Javascript
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Avançado
-                    </div>
-                  </div>
-
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-10/12 h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="w-[80%] mb-1 text-base font-semibold text-white font-poppins w-[80%]"
-                    >
-                      PHP
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Avançado
-                    </div>
-                  </div>
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-[85%] h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="w-[80%] mb-1 text-base font-semibold text-white font-poppins w-[80%]"
-                    >
-                      Wordpress
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Avançado
-                    </div>
-                  </div>
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-[93%] h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="w-[80%] mb-1 text-base font-semibold text-white font-poppins w-[80%]"
-                    >
-                      SASS
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Intermediário
-                    </div>
-                  </div>
-                  <div class="w-full rounded-full h-[18px] mb-4">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-7/12 h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
-
-                <div class="flex flex-col gap-2">
-                  <div class="flex">
-                    <div
-                      class="w-[80%] mb-1 text-base font-semibold text-white font-poppins w-[80%]"
-                    >
-                      jQuery
-                    </div>
-
-                    <div
-                      class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
-                    >
-                      Intermediário
-                    </div>
-                  </div>
-                  <div class="w-full rounded-full h-[18px]">
-                    <div
-                      class="bg-green-500 bg-gradient-green-500 w-8/12 h-[18px] rounded-full"
-                    ></div>
-                  </div>
-                </div>
+                </template>
               </div>
             </div>
           </div>
@@ -522,21 +412,38 @@
           </div>
         </div>
       </section>
-
-      <section>
-        <!-- TODO: QUALIFICAÇÕES (https://app.clickup.com/t/86871510w) -->
-        <h1>Projetos que fiz parte</h1>
-      </section>
-
-      <section>
-        <!-- TODO: QUALIFICAÇÕES (https://app.clickup.com/t/86871511d) -->
-        <h1>Contato</h1>
-      </section>
     </main>
 
-    <footer>
-      <!-- TODO: Footer (https://app.clickup.com/t/86871512e) -->
-      <h1>Footer</h1>
+    <footer class="bg-neutral-800 mt-16" x-data="hero">
+      <div class="py-5">
+        <div class="custom-container">
+          <div class="flex justify-between	items-center">
+            <div>
+              <span class="text-lg font-poppins font-semibold text-green-500">
+                Sinta-se livre para entrar em contato comigo
+              </span>
+            </div>
+
+            <div>
+              <a class="text-base font-semibold text-white hover:text-green-500 transition-all duration-500 cursor-pointer" href="#">
+                thunaymoreiradesoares@gmail.com
+              </a>
+            </div>
+
+            <div class="flex gap-4">
+              <template x-for="social in socials" :key="social.ID">
+                <a
+                  class="flex justify-center items-center w-10 h-10 border-2 border-neutral-700 bg-neutral-800 rounded p-3 hover:border-green-500"
+                  x-bind:href="social.link"
+                  target="_blank"
+                >
+                  <img class="w-3.5" x-bind:src="social.image" />
+                </a>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="./assets/js/all.js"></script>
