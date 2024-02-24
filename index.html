@@ -13,13 +13,17 @@
     ></script>
   </head>
 
-  <body class="bg-neutral-900">
-    <header class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500">
-      <div class="custom-container">
+  <body class="bg-neutral-900" x-data="header">
+    <header class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500"
+    >
+      <div class="custom-container relative z-50">
         <div class="flex justify-between items-center py-4">
-          <div>
-            <img class="w-8" src="../thunaymoreiradesoares2/assets/images/hamburguer.svg" />
-          </div>
+          <button x-on:click="displayMenu = !displayMenu">
+            <img
+              class="w-8"
+              src="../thunaymoreiradesoares2/assets/images/hamburguer.svg"
+            />
+          </button class="">
 
           <div>
             <span class="text-white text-lg font-poppins">
@@ -29,17 +33,36 @@
         </div>
       </div>
 
-      <div>
-        <div class="absolute top-0 left-0 w-screen h-screen bg-black opacity-50 blur-xl"></div>
- 
-        <div class="fixed top-36 left-1/2 left-0 -translate-x-2/4 opacity-100">
-          <h1 class="text-5xl font-poppins font-semibold text-green-500">Menu</h1>
+      <div x-bind:class="displayMenu ? 'block' : 'hidden'">
+        <div
+          class="absolute top-0 left-0 w-screen h-screen bg-black opacity-50 blur-xl"
+        ></div>
+
+        <div
+          class="fixed top-36 left-1/2 left-0 -translate-x-2/4 flex flex-col gap-8 opacity-100"
+        >
+          <h1
+            class="flex flex-col items-center text-5xl font-poppins font-semibold text-green-500"
+          >
+            Menu
+          </h1>
+
+          <ul class="flex flex-col items-center gap-8">
+            <template x-for="item in menuItems" x-on:key="item.ID">
+              <button
+                class="font-semibold text-3xl text-white hover:scale-150 transition-all duration-500 ease-linear"
+                x-on:click="goToElement(item.element)"
+                x-text="item.name"
+              ></button>
+            </template>
+          </ul>
         </div>
       </div>
     </header>
 
-    <main class="blur overflow-scroll">
+    <main x-bind:class="displayMenu ? 'blur' : ''">
       <section
+        id="top-hero"
         class="top-hero w-full h-screen bg-no-repeat bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black before:w-full before:h-full before:opacity-50"
         x-data="hero"
       >
@@ -72,7 +95,7 @@
         </div>
       </section>
 
-      <section class="w-full lg:h-screen h-auto">
+      <section id="about-me" class="w-full lg:h-screen h-auto">
         <div class="custom-container py-[5%]">
           <div
             class="flex justify-center items-center lg:flex-row flex-col gap-8 border border-neutral-700 rounded p-8 bg-neutral-800"
@@ -109,7 +132,7 @@
         </div>
       </section>
 
-      <section x-data="services">
+      <section id="services" x-data="services">
         <div
           class="custom-container mx-auto py-[5%] max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
         >
@@ -159,7 +182,7 @@
         </div>
       </section>
 
-      <section x-data="skills">
+      <section id="skills" x-data="skills">
         <div class="custom-container flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
             <h1 class="text-5xl font-poppins font-semibold text-green-500">
@@ -209,7 +232,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="experience">
         <div class="custom-container">
           <div class="flex lg:flex-row-reverse flex-col gap-20 py-[5%]">
             <div class="w-full lg:w-1/2 flex flex-col gap-8">
@@ -297,7 +320,7 @@
         </div>
       </section>
 
-      <section x-data="projects">
+      <section id="projects" x-data="projects">
         <div class="custom-container">
           <div class="flex flex-col">
             <div
@@ -417,7 +440,7 @@
     <footer class="bg-neutral-800 mt-16" x-data="hero">
       <div class="py-5">
         <div class="custom-container">
-          <div class="flex justify-between	items-center">
+          <div class="flex justify-between items-center">
             <div>
               <span class="text-lg font-poppins font-semibold text-green-500">
                 Sinta-se livre para entrar em contato comigo
@@ -425,7 +448,10 @@
             </div>
 
             <div>
-              <a class="text-base font-semibold text-white hover:text-green-500 transition-all duration-500 cursor-pointer" href="#">
+              <a
+                class="text-base font-semibold text-white hover:text-green-500 transition-all duration-500 cursor-pointer"
+                href="#"
+              >
                 thunaymoreiradesoares@gmail.com
               </a>
             </div>
