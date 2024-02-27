@@ -8,27 +8,27 @@ document.addEventListener("alpine:init", () => {
       {
         ID: 1,
         name: "Sobre mim",
-        element: document.querySelector('#about-me'),
+        element: document.querySelector("#about-me"),
       },
       {
         ID: 2,
         name: "Serviços",
-        element: document.querySelector('#services'),
+        element: document.querySelector("#services"),
       },
       {
         ID: 3,
         name: "Habilidades",
-        element: document.querySelector('#skills'),
+        element: document.querySelector("#skills"),
       },
       {
         ID: 4,
         name: "Experiência Profissional",
-        element: document.querySelector('#experience'),
+        element: document.querySelector("#experience"),
       },
       {
         ID: 5,
         name: "Projetos",
-        element: document.querySelector('#projects'),
+        element: document.querySelector("#projects"),
       },
     ],
     displayMenu: false,
@@ -36,8 +36,8 @@ document.addEventListener("alpine:init", () => {
     goToElement(element) {
       this.displayMenu = false;
 
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+      element.scrollIntoView({ behavior: "smooth" });
+    },
   }));
 
   Alpine.data("hero", () => ({
@@ -346,3 +346,21 @@ document.addEventListener("alpine:init", () => {
     ],
   }));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  var scrollMagicController = new ScrollMagic.Controller()
+
+  var scrollMagicScene = new ScrollMagic.Scene({
+    triggerElement: '#about-me .fade-in',
+    reverse: false,
+    duration: 6000,
+  }).setClassToggle('#about-me .fade-in', 'show').addTo(scrollMagicController)
+
+  scrollMagicController = new ScrollMagic.Controller()
+
+  scrollMagicScene = new ScrollMagic.Scene({
+    triggerElement: '#services .fade-in',
+    reverse: false,
+    duration: 6000,
+  }).setClassToggle('#services .fade-in', 'show').addTo(scrollMagicController)
+})

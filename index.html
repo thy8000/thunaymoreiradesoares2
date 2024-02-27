@@ -7,6 +7,8 @@
 
     <link href="./assets/css/all.css" rel="stylesheet" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -21,9 +23,9 @@
           <button x-on:click="displayMenu = !displayMenu">
             <img
               class="w-8"
-              src="../thunaymoreiradesoares2/assets/images/hamburguer.svg"
+              x-bind:src="displayMenu ? '../thunaymoreiradesoares2/assets/images/close.svg' : '../thunaymoreiradesoares2/assets/images/hamburguer.svg'"
             />
-          </button class="">
+          </button>
 
           <div>
             <span class="text-white text-lg font-poppins">
@@ -101,24 +103,24 @@
             class="flex justify-center items-center lg:flex-row flex-col gap-8 border border-neutral-700 rounded p-8 bg-neutral-800"
           >
             <img
-              class="w-full max-w-[28rem]"
+              class="fade-in w-full max-w-[28rem]"
               src="../thunaymoreiradesoares2/assets/images/imagem-thunay.png"
             />
 
-            <span class="flex flex-col gap-4">
+            <span class="fade-in flex flex-col gap-4">
               <h2 class="text-xl font-semibold font-poppins text-green-500">
                 Sobre mim
               </h2>
 
-              <h3 class="text-2xl font-medium text-white font-poppins">
+              <h3 class="fade-in text-2xl font-medium text-white font-poppins">
                 Thunay Moreira de Soares
               </h3>
 
-              <h4 class="text-lg font-medium text-white font-poppins">
+              <h4 class="fade-in text-lg font-medium text-white font-poppins">
                 Desenvolvedor Fullstack / Desenvolvedor Wordpress
               </h4>
 
-              <p class="text-neutral-300 leading-7">
+              <p class="fade-in text-neutral-300 leading-7">
                 Meu nome é Thunay Moreira de Soares, possuo 28 anos e moro em
                 Ribeirão Pires - SP. Sou formado em Tecnólogo de Análise e
                 Desenvolvimento de Sistemas na UNINOVE. Possuo 5 anos de
@@ -137,20 +139,20 @@
           class="custom-container mx-auto py-[5%] max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
         >
           <div class="w-full lg:w-5/12">
-            <div class="flex flex-col gap-8">
-              <h1 class="text-5xl font-poppins font-semibold text-green-500">
+            <div class="services-content flex flex-col gap-8">
+              <h1 class="fade-in text-5xl font-poppins font-semibold text-green-500">
                 Serviços
               </h1>
 
               <div class="flex flex-col gap-4 text-white text-lg leading-7">
-                <p>
+                <p class="fade-in">
                   Bem vindo ao meu universo! Onde transformo minhas idéias e
                   códigos se transformam em experiências digitais excepcionais.
                   Sou apaixonado por criar soluções personalizadas que não só
                   atendem, mas superam as expectativas dos clientes.
                 </p>
 
-                <p>
+                <p class="fade-in">
                   Confira os meus serviços e o que posso oferecer para você!
                   Qual idéia podemos criar hoje ?
                 </p>
@@ -162,7 +164,8 @@
             <div class="grid grid-col-1 lg:grid-cols-2 gap-4">
               <template x-for="serviceType in servicesType">
                 <div
-                  class="flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+                  class="fade-in flex flex-col justify-center items-center bg-neutral-800 border border-neutral-700 rounded gap-4 p-7"
+                  x-bind:class="`services-box-${serviceType.ID}`"
                 >
                   <img class="w-12" x-bind:src="serviceType.image" />
 

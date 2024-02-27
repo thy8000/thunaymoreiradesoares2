@@ -802,10 +802,6 @@ html {
   gap: 2rem;
 }
 
-.overflow-scroll{
-  overflow: scroll;
-}
-
 .rounded{
   border-radius: 0.25rem;
 }
@@ -1101,8 +1097,62 @@ html {
             rgba(58, 123, 76, 1) 100%);
 }
 
+.fade-in {
+  transform: translateY(-20%);
+  opacity: 0;
+}
+
+.fade-in.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 .top-hero {
   background-image: url("../../assets/images/top-hero-image.jpg");
+}
+
+#about-me img.fade-in {
+  transition: 1s all;
+}
+
+#about-me h2.fade-in {
+  transition: 1.2s all;
+}
+
+#about-me h3.fade-in {
+  transition: 1.3s all;
+}
+
+#about-me h4.fade-in {
+  transition: 1.4s all;
+}
+
+#about-me p.fade-in {
+  transition: 1.5s all;
+}
+
+#services h1 {
+  transition: 1s all;
+}
+
+#services .services-content p{
+  transition: 1.5s all;
+}
+
+#services .services-box-1 {
+  transition: 2s all;
+}
+
+#services .services-box-2 {
+  transition: 2.5s all;
+}
+
+#services .services-box-3 {
+  transition: 3s all;
+}
+
+#services .services-box-4 {
+  transition: 3.5s all;
 }
 
 .personal-projects__button {
@@ -1114,6 +1164,12 @@ html {
     rgba(167, 207, 178, 1) 0%,
     rgba(58, 122, 120, 1) 50%,
     rgba(58, 123, 76, 1) 100%);
+}
+
+.fade-in-slide {
+  opacity: 0;
+  transform: translateX(-200%);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .before\:absolute::before{
