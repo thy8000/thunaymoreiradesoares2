@@ -353,14 +353,20 @@ document.addEventListener('DOMContentLoaded', () => {
   var scrollMagicScene = new ScrollMagic.Scene({
     triggerElement: '#about-me .fade-in',
     reverse: false,
-    duration: 6000,
   }).setClassToggle('#about-me .fade-in', 'show').addTo(scrollMagicController)
-
-  scrollMagicController = new ScrollMagic.Controller()
 
   scrollMagicScene = new ScrollMagic.Scene({
     triggerElement: '#services .fade-in',
     reverse: false,
-    duration: 6000,
   }).setClassToggle('#services .fade-in', 'show').addTo(scrollMagicController)
+
+  scrollMagicScene = new ScrollMagic.Scene({
+    triggerElement: '#skills .fade-in',
+    reverse: false,
+  }).setClassToggle('#skills .fade-in', 'show').addTo(scrollMagicController)
+
+  scrollMagicScene = new ScrollMagic.Scene({
+    triggerElement: '#experience .fade-in',
+    reverse: false,
+  }).setClassToggle('#experience .fade-in', 'show').addTo(scrollMagicController)
 })

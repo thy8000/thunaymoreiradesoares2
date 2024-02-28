@@ -1136,23 +1136,23 @@ html {
 }
 
 #services .services-content p{
-  transition: 1.5s all;
+  transition: 1.2s all;
 }
 
 #services .services-box-1 {
-  transition: 2s all;
+  transition: 1.3s all;
 }
 
 #services .services-box-2 {
-  transition: 2.5s all;
+  transition: 1.6s all;
 }
 
 #services .services-box-3 {
-  transition: 3s all;
+  transition: 1.9s all;
 }
 
 #services .services-box-4 {
-  transition: 3.5s all;
+  transition: 2.2s all;
 }
 
 .personal-projects__button {
@@ -1164,6 +1164,63 @@ html {
     rgba(167, 207, 178, 1) 0%,
     rgba(58, 122, 120, 1) 50%,
     rgba(58, 123, 76, 1) 100%);
+}
+
+#skills h2 {
+  transition: 1s all;
+}
+
+#skills h3 {
+  transition: 1.1s all;
+}
+
+#skills h4 {
+  transition: 1.2s all;
+}
+
+#skills .skill-1 {
+  transition: 1.5s all;
+}
+
+#skills .skill-2 {
+  transition: 1.8s all;
+}
+
+#skills .skill-3 {
+  transition: 2.1s all;
+}
+
+#skills .skill-4 {
+  transition: 2.4s all;
+}
+
+#skills .skill-5 {
+  transition: 2.7s all;
+}
+
+#skills .skill-6 {
+  transition: 3s all;
+}
+
+#skills .skill-7 {
+  transition: 3.3s all;
+}
+
+#experience h2 {
+  transition: 1s all;
+  transition: 1.1s all;
+}
+
+#experience ol {
+  transition: 1.2s all
+}
+
+#experience .experience-1 {
+  transition: 1.5s all;
+}
+
+#experience .experience-2 {
+  transition: 1.8s all;
 }
 
 .fade-in-slide {

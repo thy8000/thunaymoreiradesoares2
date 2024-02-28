@@ -188,37 +188,37 @@
       <section id="skills" x-data="skills">
         <div class="custom-container flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
-            <h1 class="text-5xl font-poppins font-semibold text-green-500">
+            <h2 class="fade-in text-5xl font-poppins font-semibold text-green-500">
               Habilidades
-            </h1>
-
-            <h2 class="text-gray-300 text-lg leading-7">
-              Conheça minha experiência acadêmica e meus conhecimentos técnicos.
             </h2>
+
+            <h3 class="fade-in text-gray-300 text-lg leading-7">
+              Conheça minha experiência acadêmica e meus conhecimentos técnicos.
+            </h3>
           </div>
 
           <div class="flex">
             <div class="flex flex-col gap-8 w-full">
               <div>
-                <h4 class="text-white text-3xl">Conhecimento Técnico</h4>
+                <h4 class="fade-in text-white text-3xl">Conhecimento Técnico</h4>
               </div>
 
               <div class="flex flex-col gap-4 pb-12">
                 <template
                   x-for="skillList in skillsList"
-                  x-on:key="skillList.id"
+                  x-on:key="skillList.ID"
                 >
-                  <div class="flex flex-col gap-2">
+                  <div class="fade-in flex flex-col gap-2" x-bind:class="`skill-${skillList.ID}`">
                     <div class="flex">
-                      <div
+                      <h5
                         class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
                         x-text="skillList.name"
-                      ></div>
+                      ></h5>
 
-                      <div
+                      <h6
                         class="flex justify-end w-[20%] text-neutral-300 text-sm font-bold font-poppins"
                         x-text="skillList.level"
-                      ></div>
+                      ></h6>
                     </div>
 
                     <div class="w-full rounded-full h-[18px] mb-4">
@@ -239,24 +239,24 @@
         <div class="custom-container">
           <div class="flex lg:flex-row-reverse flex-col gap-20 py-[5%]">
             <div class="w-full lg:w-1/2 flex flex-col gap-8">
-              <h2 class="text-5xl font-poppins font-semibold text-green-500">
+              <h2 class="fade-in text-5xl font-poppins font-semibold text-green-500">
                 Experiência Profissional
               </h2>
 
-              <p class="text-white text-lg leading-7">
+              <h3 class="fade-in text-white text-lg leading-7">
                 Explore minha jornada profissional como Desenvolvedor, onde
                 busquei constantemente aprimorar minhas habilidades e contribuir
                 de forma significativa para projetos inovadores em empresas
                 incríveis.
-              </p>
+              </h3>
             </div>
 
             <div class="w-full lg:w-1/2">
               <div
                 class="p-12 bg-neutral-800 border border-neutral-700 rounded"
               >
-                <ol class="border-l-4 border-green-500">
-                  <li>
+                <ol class="fade-in border-l-4 border-green-500">
+                  <li class="experience-1 fade-in">
                     <div class="relative flex-start flex items-center">
                       <div
                         class="absolute -left-3 top-0 flex w-5 h-5 rounded-full bg-gradient-green-500"
@@ -273,7 +273,7 @@
                     </div>
 
                     <div class="mb-6 ml-6 pb-6">
-                      <a href="#!" class="text-sm text-white">2019 - 2022</a>
+                      <a href="#" class="text-sm text-white">2019 - 2022</a>
                       <p class="mb-4 mt-2 text-neutral-300">
                         Trabalhei como Desenvolvedor Back-End Júnior utilizando
                         o framework Wordpress. Meu trabalho consistia em criar
@@ -285,7 +285,7 @@
                     </div>
                   </li>
 
-                  <li>
+                  <li class="experience-2 fade-in">
                     <div class="relative flex-start flex items-center">
                       <div
                         class="absolute -left-3 flex w-5 h-5 rounded-full bg-gradient-green-500"
@@ -302,7 +302,7 @@
                       </div>
                     </div>
                     <div class="mb-6 ml-6 pb-6">
-                      <a href="#!" class="text-sm text-white"
+                      <a href="#" class="text-sm text-white"
                         >2022 - Atualmente</a
                       >
                       <p class="mb-4 mt-2 text-neutral-300">

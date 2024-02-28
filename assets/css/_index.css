@@ -8,6 +8,8 @@
 @import url('components/about-me.css');
 @import url('components/services.css');
 @import url('components/personal-projects.css');
+@import url('components/skills.css');
+@import url('components/experience.css');
 
 .fade-in-slide {
     opacity: 0;
