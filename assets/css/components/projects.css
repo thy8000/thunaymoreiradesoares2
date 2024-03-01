@@ -1,3 +1,15 @@
+#projects .projects-title {
+    transition: 1s all;
+}
+
+#projects .projects-buttons {
+    transition: 1.2s all;
+}
+
+#projects .projects-grid {
+    transition: 1.4s all;
+}
+
 .personal-projects__button {
     background: transparent;
 }

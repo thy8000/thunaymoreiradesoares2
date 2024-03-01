@@ -16,9 +16,11 @@
   </head>
 
   <body class="bg-neutral-900" x-data="header">
-    <header class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500"
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500"
     >
-      <div class="custom-container relative z-50">
+      <div class="fade-in-3 transition duration-[3500ms] custom-container relative z-50">
         <div class="flex justify-between items-center py-4">
           <button x-on:click="displayMenu = !displayMenu">
             <img
@@ -72,18 +74,18 @@
           class="custom-container relative flex flex-col items-center justify-center gap-12 w-full h-full"
         >
           <h2
-            class="text-5xl lg:text-6xl font-poppins font-bold text-white text-center lg:text-start"
+            class="fade-in-3 transition duration-[3500ms] text-5xl lg:text-6xl font-poppins font-bold text-white text-center lg:text-start"
           >
             Thunay Moreira de Soares
           </h2>
 
           <h3
-            class="text-2xl lg:text-3xl font-medium tracking-[0.5rem] uppercase text-white text-center lg:text-start"
+            class="fade-in-3 transition duration-[4000ms] text-2xl lg:text-3xl font-medium tracking-[0.5rem] uppercase text-white text-center lg:text-start"
           >
             Desenvolvedor Full-Stack
           </h3>
 
-          <div class="flex flex-wrap justify-center items-center gap-8">
+          <div class="fade-in-3 transition duration-[4500ms] flex flex-wrap justify-center items-center gap-8">
             <template x-for="social in socials" :key="social.ID">
               <a
                 class="flex justify-center items-center w-16 h-16 border-2 border-neutral-700 bg-neutral-800 rounded p-3 hover:border-green-500"
@@ -140,7 +142,9 @@
         >
           <div class="w-full lg:w-5/12">
             <div class="services-content flex flex-col gap-8">
-              <h1 class="fade-in text-5xl font-poppins font-semibold text-green-500">
+              <h1
+                class="fade-in text-5xl font-poppins font-semibold text-green-500"
+              >
                 Serviços
               </h1>
 
@@ -188,7 +192,9 @@
       <section id="skills" x-data="skills">
         <div class="custom-container flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
-            <h2 class="fade-in text-5xl font-poppins font-semibold text-green-500">
+            <h2
+              class="fade-in text-5xl font-poppins font-semibold text-green-500"
+            >
               Habilidades
             </h2>
 
@@ -200,7 +206,9 @@
           <div class="flex">
             <div class="flex flex-col gap-8 w-full">
               <div>
-                <h4 class="fade-in text-white text-3xl">Conhecimento Técnico</h4>
+                <h4 class="fade-in text-white text-3xl">
+                  Conhecimento Técnico
+                </h4>
               </div>
 
               <div class="flex flex-col gap-4 pb-12">
@@ -208,7 +216,10 @@
                   x-for="skillList in skillsList"
                   x-on:key="skillList.ID"
                 >
-                  <div class="fade-in flex flex-col gap-2" x-bind:class="`skill-${skillList.ID}`">
+                  <div
+                    class="fade-in flex flex-col gap-2"
+                    x-bind:class="`skill-${skillList.ID}`"
+                  >
                     <div class="flex">
                       <h5
                         class="mb-1 text-lg font-semibold text-white font-poppins w-[80%]"
@@ -239,7 +250,9 @@
         <div class="custom-container">
           <div class="flex lg:flex-row-reverse flex-col gap-20 py-[5%]">
             <div class="w-full lg:w-1/2 flex flex-col gap-8">
-              <h2 class="fade-in text-5xl font-poppins font-semibold text-green-500">
+              <h2
+                class="fade-in text-5xl font-poppins font-semibold text-green-500"
+              >
                 Experiência Profissional
               </h2>
 
@@ -327,7 +340,7 @@
         <div class="custom-container">
           <div class="flex flex-col">
             <div
-              class="flex flex-col justify-center items-center gap-4 text-center w-full"
+              class="projects-title fade-in-2 flex flex-col justify-center items-center gap-4 text-center w-full"
             >
               <h2 class="text-5xl font-poppins font-semibold text-green-500">
                 Projetos
@@ -339,7 +352,9 @@
               </h3>
             </div>
 
-            <div class="flex justify-center items-center gap-4 py-10">
+            <div
+              class="projects-buttons fade-in-2 flex justify-center items-center gap-4 py-10"
+            >
               <a
                 href="#"
                 class="personal-projects__button py-4 px-6 border-2 border-green-500 rounded-full cursor-pointer"
@@ -386,13 +401,11 @@
               </a>
             </div>
 
-            <div class="grid grid-cols-3 gap-4">
+            <div class="projects-grid fade-in-2 grid grid-cols-3 gap-4">
               <template x-for="project in projects" x-on:key="data.ID">
                 <div
                   class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
                   x-show="tab === project.type || tab === 'all'"
-                  x-transition:enter.duration.1000ms
-                  x-transition:leave.duration.1000ms
                 >
                   <div>
                     <img
@@ -453,7 +466,7 @@
             <div>
               <a
                 class="text-base font-semibold text-white hover:text-green-500 transition-all duration-500 cursor-pointer"
-                href="#"
+                href="mailto:thunaymoreiradesoares@gmail.com"
               >
                 thunaymoreiradesoares@gmail.com
               </a>
