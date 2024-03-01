@@ -20,7 +20,7 @@
       id="header"
       class="fixed top-0 left-0 w-full z-10 bg-neutral-800 border-b-2 border-green-500"
     >
-      <div class="fade-in-3 transition duration-[3500ms] custom-container relative z-50">
+      <div class="custom-container fade-in-3 transition duration-[3500ms] relative z-50">
         <div class="flex justify-between items-center py-4">
           <button x-on:click="displayMenu = !displayMenu">
             <img
@@ -99,8 +99,8 @@
         </div>
       </section>
 
-      <section id="about-me" class="w-full lg:h-screen h-auto">
-        <div class="custom-container py-[5%]">
+      <section id="about-me" class="w-full">
+        <div class="custom-container py-[10%] lg:py-[5%]">
           <div
             class="flex justify-center items-center lg:flex-row flex-col gap-8 border border-neutral-700 rounded p-8 bg-neutral-800"
           >
@@ -138,7 +138,7 @@
 
       <section id="services" x-data="services">
         <div
-          class="custom-container mx-auto py-[5%] max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
+          class="custom-container py-[10%] lg:py-[5%] mx-auto max-w-[1140px] flex justify-center flex-col lg:flex-row gap-20"
         >
           <div class="w-full lg:w-5/12">
             <div class="services-content flex flex-col gap-8">
@@ -190,7 +190,7 @@
       </section>
 
       <section id="skills" x-data="skills">
-        <div class="custom-container flex flex-col gap-12">
+        <div class="custom-container py-[10%] lg:py-[5%] flex flex-col gap-12">
           <div class="flex flex-col justify-center items-center gap-4">
             <h2
               class="fade-in text-5xl font-poppins font-semibold text-green-500"
@@ -211,7 +211,7 @@
                 </h4>
               </div>
 
-              <div class="flex flex-col gap-4 pb-12">
+              <div class="flex flex-col gap-4">
                 <template
                   x-for="skillList in skillsList"
                   x-on:key="skillList.ID"
@@ -247,8 +247,8 @@
       </section>
 
       <section id="experience">
-        <div class="custom-container">
-          <div class="flex lg:flex-row-reverse flex-col gap-20 py-[5%]">
+        <div class="custom-container py-[10%] lg:py-[5%]">
+          <div class="flex lg:flex-row-reverse flex-col gap-20">
             <div class="w-full lg:w-1/2 flex flex-col gap-8">
               <h2
                 class="fade-in text-5xl font-poppins font-semibold text-green-500"
@@ -337,7 +337,7 @@
       </section>
 
       <section id="projects" x-data="projects">
-        <div class="custom-container">
+        <div class="custom-container py-[10%] lg:py-[5%]">
           <div class="flex flex-col">
             <div
               class="projects-title fade-in-2 flex flex-col justify-center items-center gap-4 text-center w-full"
@@ -353,7 +353,7 @@
             </div>
 
             <div
-              class="projects-buttons fade-in-2 flex justify-center items-center gap-4 py-10"
+              class="projects-buttons fade-in-2 flex justify-center items-center flex-wrap gap-4 py-10"
             >
               <a
                 href="#"
@@ -401,7 +401,7 @@
               </a>
             </div>
 
-            <div class="projects-grid fade-in-2 grid grid-cols-3 gap-4">
+            <div class="projects-grid fade-in-2 grid grid-cols-1 lg:grid-cols-3 gap-4">
               <template x-for="project in projects" x-on:key="data.ID">
                 <div
                   class="flex flex-col gap-8 p-5 bg-neutral-800 border border-neutral-700 rounded"
@@ -453,10 +453,10 @@
       </section>
     </main>
 
-    <footer class="bg-neutral-800 mt-16" x-data="hero">
+    <footer id="footer" class="bg-neutral-800 mt-16" x-data="hero">
       <div class="py-5">
         <div class="custom-container">
-          <div class="flex justify-between items-center">
+          <div class="flex justify-between items-center flex-col lg:flex-row gap-8 text-center lg:text-start">
             <div>
               <span class="text-lg font-poppins font-semibold text-green-500">
                 Sinta-se livre para entrar em contato comigo

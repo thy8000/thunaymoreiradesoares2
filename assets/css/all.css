@@ -750,6 +750,10 @@ html {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -918,6 +922,11 @@ html {
   padding-bottom: 5%;
 }
 
+.py-\[10\%\]{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -1067,6 +1076,10 @@ html {
 
 .duration-\[4500ms\]{
   transition-duration: 4500ms;
+}
+
+.duration-\[2000ms\]{
+  transition-duration: 2000ms;
 }
 
 .ease-linear{
@@ -1359,12 +1372,21 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
 
   .lg\:flex-row-reverse{
     flex-direction: row-reverse;
+  }
+
+  .lg\:py-\[5\%\]{
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
   .lg\:text-start{
